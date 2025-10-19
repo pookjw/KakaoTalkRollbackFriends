@@ -5,7 +5,7 @@
 namespace ktrf_FriendsTabViewController {
     namespace viewDidLoad {
         void (*original)(__kindof UIViewController *self, SEL _cmd);
-        void custom(__kindof UIViewController *self, SEL _cmd, NSArray *identifiers, id identifier) {
+        void custom(__kindof UIViewController *self, SEL _cmd) {
             original(self, _cmd);
 
             __kindof UIViewController *old = [[objc_lookUpClass("_TtC9KakaoTalk21FriendsViewController") alloc] init];
