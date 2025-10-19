@@ -14,6 +14,7 @@ namespace ktrf_FriendsTabViewController {
             old.view.frame = self.view.bounds;
             old.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
             [old didMoveToParentViewController:self];
+            [old release];
         }
         void hook(void) {
             Method method = class_getInstanceMethod(objc_getClass("_TtC23FriendsFeedPresentation24FriendsTabViewController"), @selector(viewDidLoad));
